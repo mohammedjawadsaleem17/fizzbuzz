@@ -21,7 +21,7 @@ describe('POST /fizzbuzz', () => {
     expect(response.body).toEqual(expectedOutput);
   });
 
-  it('returns "Invalid item" for "invalid"', async () => {
+  it('returns "Invalid item" ', async () => {
     const inputData = { values: ['a', 'b', 'c'] };
     const expectedOutput = [
       { value: 'a', output: 'Invalid item', divisions: [] },
