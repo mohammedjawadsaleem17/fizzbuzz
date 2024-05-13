@@ -1,3 +1,5 @@
+// server.js
+
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -5,24 +7,19 @@ const port = 5000;
 
 app.use(cors());
 app.use(express.json());
- 
 
-app.get("/test",(req,res)=>{
+app.get("/test", (req, res) => {
   res.send("Hey I am Working !!")
 })
 
- 
-
-
 app.post('/fizzbuzz', (req, res) => {
   const { values } = req.body;
-  console.log(`These are the values that i gotcha`,values);
-//Values return type is an Array!
-console.log(typeof values[0])
+  console.log(`These are the values that i gotcha`, values);
+  //Values return type is an Array!
+  console.log(typeof values[0])
   const result = values.map(value => {
-    console.log(`individual value`,value);
+    console.log(`individual value`, value);
 
-    //Here the division happens since javascript allows/treats string numbers "1" as a Number and performs the divison
     const divisible3 = value % 3 === 0;
     const divisible5 = value % 5 === 0;
     const divisions = [];
@@ -44,3 +41,5 @@ console.log(typeof values[0])
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+module.exports = app;  

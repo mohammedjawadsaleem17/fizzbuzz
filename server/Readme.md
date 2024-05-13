@@ -17,3 +17,8 @@ Although the backend part is deployed to vercel which can be accessed on : https
 to test : https://server-three-kappa.vercel.app/test
 
 The Post Request is made using the URL : https://server-three-kappa.vercel.app/fizzbuzz
+
+
+#Inorder to Run the TEST cases please run the following command
+1)npm i mocha supertest jest@latest
+2)npx jest

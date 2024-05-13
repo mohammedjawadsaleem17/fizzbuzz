@@ -27,7 +27,7 @@ function App() {
     const valuesArray = values.split(',').map(value => value.trim());
     console.log(`This is the values Array after converting a string into a List`,valuesArray)
 
-    const response = await fetch('https://server-three-kappa.vercel.app/fizzbuzz', {
+    const response = await fetch('https://server20-mohammedjawadsaleem17-mohammed-jawad-saleems-projects.vercel.app/fizzbuzz', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
