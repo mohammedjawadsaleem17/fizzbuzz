@@ -21,7 +21,7 @@ describe('POST /fizzbuzz', () => {
     expect(response.body).toEqual(expectedOutput);
   });
 
-  it('returns "Invalid item" for non-numeric input', async () => {
+  it('returns "Invalid item" for "invalid"', async () => {
     const inputData = { values: ['a', 'b', 'c'] };
     const expectedOutput = [
       { value: 'a', output: 'Invalid item', divisions: [] },
